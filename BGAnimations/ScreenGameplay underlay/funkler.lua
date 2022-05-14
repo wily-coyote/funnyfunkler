@@ -1,4 +1,4 @@
-local allowedCustomization = playerConfig:get_data(pn_to_profile_slot(PLAYER_1)).CustomizeGameplay
+-- local allowedCustomization = playerConfig:get_data(pn_to_profile_slot(PLAYER_1)).CustomizeGameplay
 
 local t = Def.ActorFrame{
 	Name = "FunnyFunkler"
@@ -173,9 +173,13 @@ t[#t+1] = MovableBorder(240, 240, 1, 0, 0)
 
 t.OnCommand = function(self)
 	-- MovableValues.FunklerX, MovableValues.FunklerY
-	self:xy(0, 0):zoom(MovableValues.FunklerZoom)
-	self:GetChild("Opponent"):x(-(MovableValues.FunklerGap/2))
-	self:GetChild("Player"):x(MovableValues.FunklerGap/2)
+	-- disabled for now until i can figure out how i can work out player config in the repo
+	-- self:xy(0, 0):zoom(MovableValues.FunklerZoom)
+	-- self:GetChild("Opponent"):x(-(MovableValues.FunklerGap/2))
+	-- self:GetChild("Player"):x(MovableValues.FunklerGap/2)
+	self:xy(0, 0):zoom(1)
+	self:GetChild("Opponent"):x(-SCREEN_CENTER_X/2)
+	self:GetChild("Player"):x(SCREEN_CENTER_X/2)
 -- if allowedCustomization then
 -- 	Movable.DeviceButton_m.element = self
 -- 	Movable.DeviceButton_g.element = self

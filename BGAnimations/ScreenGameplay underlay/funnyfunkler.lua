@@ -52,7 +52,8 @@ t = Def.ActorFrame{
 }
 
 t.OnCommand=function(self)
-	self:xy(MovableValues.FunklerX, MovableValues.FunklerY)
+	-- self:xy(MovableValues.FunklerX, MovableValues.FunklerY)
+	self:xy(SCREEN_CENTER_X, SCREEN_CENTER_Y)
 end
 
 -- SCREENMAN:GetTopScreen():GetChild("PlayerP1"):GetChild("NoteField"):GetChild("Board"):visible(false)
